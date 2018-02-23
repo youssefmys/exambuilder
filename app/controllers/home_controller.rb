@@ -1,11 +1,13 @@
 class HomeController < ApplicationController
 
-  before_action :authenticate_user!, :redirect_if_logged_in
+  before_action :authenticate_user!
   layout  'main_layout'
 
   def home
-
-    render :home
+    if !logged_in?
+      redirect_to new_session_path 
+    end
+      render :home
   end
 
 end
