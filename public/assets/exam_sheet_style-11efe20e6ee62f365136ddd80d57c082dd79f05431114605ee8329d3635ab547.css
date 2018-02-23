@@ -1,0 +1,11 @@
+.exam_box {
+  width: 700px ;
+  margin: 0 auto ;
+}
+
+.exam_box  .question_sheet_box {
+  border:  1px solid black ;
+  margin-bottom: 5px ;
+  padding: 10px ;
+  border-radius: 5px ; 
+}

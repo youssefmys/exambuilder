@@ -1,0 +1,7 @@
+<%= form_for @exam_share , :url => exam_exam_shares_path do |f| %>
+  <%= f.label :email %>
+  <%= f.email_field :email %>
+  <%= f.label :one_time_use, :title => 'Check this box to share for one time only after that link will be invalid' %>
+  <%= f.check_box :one_time_use %>
+  <%= f.submit "share" %>
+<% end %>

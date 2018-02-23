@@ -1,0 +1,11 @@
+.wrapper .message_box {
+  width: 700px ;
+  height: 70px ;
+  border: 1px solid #3491D4 ;
+  border-radius:  5px ;
+  margin: 0 auto;
+  padding: 10px ;
+  text-align: center;
+  font-size:  25px ;
+  color: #000 ;
+}

@@ -1,0 +1,16 @@
+.wrapper .home_link_box  {
+  margin: 0 auto ;
+  width: 700px ;
+  border: 1px solid black ;
+  border-radius: 5px ;
+  padding: 10px ;
+  text-align:  center;
+}
+
+.wrapper .home_link_box  a {
+  width: 200px ;
+  height: 30px ;
+  text-decoration: none ;
+  color:  #3491D4 ;
+  font-size: 20px ;
+}

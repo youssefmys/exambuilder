@@ -1,0 +1,33 @@
+.exam_box {
+  width: 700px ;
+  margin: 0 auto ;
+}
+
+.exam_box  .question_sheet_box {
+  border:  1px solid black ;
+  margin-bottom: 5px ;
+  padding: 10px ;
+  border-radius: 5px ;
+}
+
+.exam_box #counter {
+  border-radius:  5px ;
+  height: 40px ;
+  font-size: 30px ;
+  color: #FFF ;
+  background-color:  #3491D4 ;
+}
+
+.exam_box input[type=submit] {
+  height: 40px ;
+  display: inline-block;
+  margin-top: 10px ;
+  margin-bottom:  10px ;
+  box-shadow: none ;
+  border: none ;
+  border-radius: 5px ;
+  background-color: #3491D4 ;
+  color: #FFF ;
+  font-weight:  bold ;
+  width: 200px ;
+}

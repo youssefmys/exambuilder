@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title> </title>
+    <%= stylesheet_link_tag :main_layout_style %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= csrf_meta_tag %>
+  </head>
+  <body>
+  <div class = 'wrapper'>
+
+    <div  id = 'nav_bar'>
+      <li id = "logo_list">Exam Builder</li>
+      <% if current_user %>
+        <li id = "user_name_list"><%= link_to current_user.username, home_path %></li>
+        <li id = "log_out_list"><%= link_to 'Log out', session_path(current_user.id), :method => :delete %></li>
+      <% else %>
+        <li id = 'log_in_list'><%= link_to 'Log in' , new_session_path %></li>
+      <% end %>
+    </div>
+    <div  id = 'under_nav_bar'></div>
+    <%= yield %>
+  </div>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+.wrapper {
+}
+
+.wrapper #nav_bar {
+  position: fixed ;
+  top: 0 ;
+  right: 0 ;
+  left: 0 ;
+  height: 50px ;
+  background-color:  #3491D4 ;
+}
+
+.wrapper #nav_bar  li#logo_list{
+  position: fixed ;
+  list-style: none ;
+  color: #FFF ;
+  top: 5px ;
+  left: 5px ;
+  font-size:  30px ;
+}
+
+.wrapper #nav_bar li#user_name_list{
+  position: fixed ;
+  right: 5px ;
+  top: 5px ;
+  list-style:  none ;
+  color: white
+}
+.wrapper #nav_bar li#log_in_list{
+  position: fixed ;
+  right: 5px ;
+  top: 5px ;
+  list-style:  none ;
+  color: white
+}
+
+.wrapper #nav_bar li#log_out_list{
+  position: fixed ;
+  right: 100px ;
+  top: 5px ;
+  list-style:  none ;
+  color: white
+}
+
+.wrapper #nav_bar li a {
+  text-decoration: none ;
+  color: #FFF ;
+}
+.wrapper #under_nav_bar {
+  margin-bottom: 80px ;
+}

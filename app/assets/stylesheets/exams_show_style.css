@@ -1,0 +1,56 @@
+.wrapper .exam-item {
+  border:  1px solid  black ;
+  width: 700px ;
+  margin: 0 auto 5px auto ;
+  padding: 10px ;
+  height: 60px ;
+  border-radius:  5px ;
+}
+
+.wrapper .exam-item a .exam-name-box{
+  display:  inline-block;
+  float: left ;
+  width: 500px ; ;
+}
+
+.wrapper .exam-item a .exam-options{
+  display: inline-block;
+  float: right;
+  height: 40px ;
+  width: 40px ;
+  border: 1px solid black ;
+  background-image:  url("/images/delete_icon.png") ;
+}
+
+.wrapper .exam-item  .exam-options form .delete_button{
+  width: 40px ;
+  height: 40px ;
+  box-shadow:  none ;
+  background: none ;
+  border: none ;
+  background-image:  url("/images/delete_icon.png") ;
+  float: right ;
+  cursor: pointer ;
+}
+
+.wrapper .exam-item  .exam-options form .edit_button{
+  width: 40px ;
+  height: 40px ;
+  box-shadow:  none ;
+  background: none ;
+  border: none ;
+  background-image:  url("/images/edit_icon.png") ;
+  float: right ;
+  cursor: pointer ;
+}
+
+.wrapper .exam-item  .exam-options form .share_button{
+  width: 40px ;
+  height: 40px ;
+  box-shadow:  none ;
+  background: none ;
+  border: none ;
+  background-image:  url("/images/share_icon.png") ;
+  float: right ;
+  cursor: pointer ;
+}

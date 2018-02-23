@@ -1,0 +1,10 @@
+<%= stylesheet_link_tag :password_reset_style %>
+
+<div class = "password_reset_box">
+
+  <%= form_tag '/password_reset' do  %>
+    <%= text_field_tag  'email',nil, :placeholder => "Please insert your email address" %><br>
+    <%= submit_tag 'Send Me reset link' %>
+  <% end %>
+
+</div>

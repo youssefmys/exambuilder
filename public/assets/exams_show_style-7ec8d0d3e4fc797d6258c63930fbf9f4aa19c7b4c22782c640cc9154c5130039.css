@@ -1,0 +1,19 @@
+.wrapper .exam-item {
+  border:  1px solid  black ;
+  width: 700px ;
+  margin: 0 auto 5px auto ;
+  padding: 10px ;
+  height: 60px ;
+}
+
+.wrapper .exam-item a .exam-name-box{
+  display:  inline-block;
+  float: left ;
+}
+
+.wrapper .exam-item a .exam-options{
+  display: inline-block;
+  float: right;
+  border: 1px solid black ; 
+  background-image:  url("/images/delete_icon.png") ;
+}

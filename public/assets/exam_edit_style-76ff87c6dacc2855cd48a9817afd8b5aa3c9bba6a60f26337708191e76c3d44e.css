@@ -1,0 +1,22 @@
+.wrapper .exam_box {
+  width: 700px ;
+  text-align: center;
+  margin: 0 auto ;
+}
+
+.wrapper .exam_box .question_box {
+  border: 1px solid black ;
+  border-radius: 5px ;
+  padding: 10px ;
+  margin-bottom:  5px ;
+}
+.wrapper .exam_box .question_box input[type=text] {
+  width: 300px ;
+  margin-bottom: 10px ;
+  height: 30px;
+  display: inline-block;
+}
+
+.wrapper .exam_box .question_box label {
+  display: inline-block;
+}

@@ -1,0 +1,14 @@
+<%= stylesheet_link_tag  :new_exam_style %>
+<div class = 'new_exam_box' %>
+
+<%= form_for exam  do |f| %>
+  <%= f.text_field :title, :placeholder => 'Insert exam title' %><br><br>
+  <%= f.number_field :allowed_time_in_minutes, :placeholder => "Enter allowed time in minutes" %> <br>
+  <% if exam.persisted? %>
+    <%= f.submit "Edit exam" %>
+  <% else  %>
+    <%= f.submit "Create new exam" %>
+  <% end %>
+<% end %>
+
+</div>

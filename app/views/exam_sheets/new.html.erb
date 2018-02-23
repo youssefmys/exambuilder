@@ -1,0 +1,41 @@
+<%= stylesheet_link_tag  :exam_sheet_style %>
+<%= javascript_include_tag :counter_script %>
+
+<div class = 'exam_box'>
+
+<div id = "counter" ></div>
+
+
+  <h3> Exam title : <%= @exam_sheet.exam.title %></h3>
+
+  <%= form_for @exam_sheet, :url => exam_exam_sheets_path do |f|  %>
+
+  <script>
+    var time_allowed = <%= @exam_sheet.exam.allowed_time_in_minutes.inspect %>
+    countdown(time_allowed);
+  </script>
+
+    <%= f.label :student_name  %>
+    <%= f.text_field :student_name  %><br><br>
+
+    <% if !@exam_sheet.question_sheets.empty? %>
+
+      <%= f.fields_for :question_sheets do |qs_form| %>
+
+      <div class = 'question_sheet_box'>
+        <%= qs_form.object.question.title %><br>
+
+          <%= qs_form.radio_button :choosen_answer, 1 unless qs_form.object.question.first_answer .blank? %><%= qs_form.object.question.first_answer    %><br>
+          <%= qs_form.radio_button :choosen_answer, 2 unless qs_form.object.question.second_answer.blank? %><%= qs_form.object.question.second_answer   %><br>
+          <%= qs_form.radio_button :choosen_answer, 3 unless qs_form.object.question.third_answer .blank? %><%= qs_form.object.question.third_answer    %><br>
+          <%= qs_form.radio_button :choosen_answer, 4 unless qs_form.object.question.fourth_answer.blank? %><%= qs_form.object.question.fourth_answer   %><br>
+          <%= qs_form.hidden_field :question_id, :value => qs_form.object.question_id %>
+      </div>
+
+      <% end %>
+
+    <% end %>
+
+    <%= f.submit 'Submit Answers' %>
+  <% end %>
+</div>

@@ -1,0 +1,20 @@
+<%= stylesheet_link_tag   :exams_show_style %>
+
+<% if !@exams.empty? %>
+    <% @exams.each do |e| %>
+      <div  class =  'exam-item'>
+
+        <%= link_to  exam_path(e.id) do %>
+            <div class = 'exam-name-box'><%= e.title  %></div>
+        <% end %>
+
+            <div class = 'exam-options'>
+                <%= button_to "", exam_path(e.id) , :method => :delete,
+                 :onclick => "return confirm('Are you sure to delete exam: #{e.title}')", :class => "delete_button" %>
+                <%= button_to "", edit_exam_path(e.id) , :method => :get,  :class => "edit_button" %>
+                <%= button_to "", new_exam_exam_share_path(e.id), :method => :get, :class => "share_button" %>
+            </div>
+
+      </div>
+    <% end %>
+<% end %>

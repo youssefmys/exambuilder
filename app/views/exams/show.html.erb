@@ -1,0 +1,52 @@
+<%= stylesheet_link_tag  :exam_edit_style %>
+<div class = "exam_box">
+
+<h3> <%= @exam.title  %> </h3>
+<h3> Allowed time: <%= @exam.allowed_time_in_minutes  %> </h3>
+<%= link_to 'Edit exam title', edit_exam_path(@exam.id) %><br><br>
+
+<%= button_to  "Add Question", exam_questions_path(@exam.id) %>
+
+<% if !@exam.questions.empty? %>
+
+<h3>Questions</h3>
+<%= form_for @exam do |f| %>
+    <%= f.fields_for :questions do |q_form| %>
+
+    <div class = "question_box" >
+
+      <% if  !q_form.object.errors.full_messages.empty? %>
+        <% q_form.object.errors.full_messages.each do |m| %>
+            <h3 style = "color: red;"><%= m %></h3>
+        <% end  %>
+      <% end %>
+
+        <%= q_form.label :title %>
+        <%= q_form.text_field :title %><br><br>
+
+        <%= q_form.label  :first_answer, "1-" %>
+        <%= q_form.text_field  :first_answer %><br>
+        <%= q_form.label  :second_answer, "2-"%>
+        <%= q_form.text_field  :second_answer%><br>
+        <%= q_form.label  :third_answer, "3-" %>
+        <%= q_form.text_field  :third_answer %><br>
+        <%= q_form.label  :fourth_answer, "4-"%>
+        <%= q_form.text_field  :fourth_answer%><br><br>
+
+        <%=  q_form.label :right_answer, 'Choose the right answer' %>
+        <%=  q_form.select :right_answer, options_for_select((1..4).collect{|i| [i,i]}) %><br>
+
+
+        <%= q_form.label  :marks %>
+        <%= q_form.number_field  :marks %><br>
+        <%= link_to  "Delete Question", exam_question_path(@exam.id, q_form.object.id), :method => :delete %>
+        <br>
+        <br>
+        <br>
+    </div> <!--end of question_box-->
+    <% end %>
+        <%= f.submit "Save exam" %>
+<% end %>
+
+<% end %>
+</div>

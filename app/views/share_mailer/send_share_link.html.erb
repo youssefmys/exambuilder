@@ -1,0 +1,2 @@
+<%= @user.username %> shared exam entitled :  <%= @exam.title %> with you on ExamBuilder. Use the link below to join your <br>
+<%= link_to "Share Link", new_exam_exam_sheet_url(@exam.id, :share => @token, :share_id => @exam_share.id) %>

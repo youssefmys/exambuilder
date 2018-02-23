@@ -1,0 +1,16 @@
+.wrapper {
+  
+}
+
+.wrapper #nav_bar {
+  position: fixed ;
+  top: 0 ;
+  right: 0 ;
+  left: 0 ;
+  height: 50px ;
+  background-color:  #3491D4 ;
+}
+
+.wrapper #under_nav_bar {
+  margin-bottom: 80px ;
+}
